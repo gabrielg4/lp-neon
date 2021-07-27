@@ -74,22 +74,186 @@
             top: 4.1rem;
             left: 0;
             z-index: 2;
+            max-width: 43.5rem;
         }
 
         .card-back {
             bottom: 4.4rem;
             right: 8.6rem;
             z-index: 1;
+            max-width: 35.2rem;
         }
             .circle {
-                top: 2.8rem;
-                right: 4.6rem;
+            max-width: 55.3rem;
+            top: 2.8rem;
+            right: 4.6rem;
         }
 
           }
 
 
       }
+
+    @include responsive(1440px) {
+          .area-image {
+              margin-right: -13.4rem;
+          }
+      }
+    @include responsive(1366px) {
+        .area-image {
+            margin-right: -9rem;
+            .image {
+                .card-back {
+                    right: 4rem;
+                }
+            }
+        }
+    }
+   
+
+    }
+    @include responsive(1050px) {
+        padding-top: 14.5rem;
+        height: 65.6rem;
+        .container {
+            .text {
+                ul {
+                    margin-top: 4.5rem;
+                }
+            }
+            .area-image {
+                margin-right: -10px;
+                h2 {
+                    margin-bottom: 1.5rem;
+                }
+                .image {
+                    height: 45rem;
+                    .card-front {
+                        max-width: 35rem;
+                        top: 8rem;
+                    }
+                    .card-back {
+                        max-width: 29rem;
+                        bottom: 0;
+                    }
+                    .circle {
+                        max-width: 46rem;
+                    }
+                }
+            }
+        }
+    }
+    @include responsive(991px) {
+        height: 89.1rem;
+        background-size: cover;
+        
+        .container {
+            flex-direction: column;
+            align-items: center;
+            .text {
+                @include flex(column, center, center);
+                margin-bottom: 5rem;
+                max-width: 68.5rem;
+                h3 {
+                    text-align: center;
+                    
+                }
+                h1 {
+                    text-align: center;
+                    margin-bottom: 1.6rem;
+                }
+               ul {
+                   margin-top: 3.9rem;
+               }
+            }
+            .area-image {
+                h2 {
+                    margin-bottom: 1.9rem;
+                }
+                .image {
+                    max-width: 51.1rem;
+                    height: 42.4rem;
+                    margin: 0 auto;
+                    top: 0;
+                    .circle {
+                        max-width: 42.9rem;
+                        top: 0;
+                        right: 1.3rem;
+                    }
+                    .card-front {
+                        max-width: 34rem;
+                        left: 0;
+                        top: 3.5rem;
+                    }
+                    .card-back {
+                        max-width: 27.4rem;
+                        right: 2.9rem;
+                        bottom: 3.6rem;
+                    }
+                }
+            }
+        }
+    }
+    @include responsive(480px) {
+        padding-top: 12.4rem;
+        height: 73.9rem;
+        .container {
+            .text {
+                h3 {
+                    font-size: 1.6rem;
+                    line-height: 120%;
+                    margin-bottom: 1.5rem;
+                }
+                h1 {
+                    font-size: 3.2rem;
+                    line-height: 112%;
+                    margin-bottom: 3.7rem;
+                }
+                ul {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    max-width: 27.5rem;
+                    
+                    li {
+                        &:not(:last-child) {
+                            margin-bottom: 1.7rem;
+                        }
+                        .icon {
+                            width: 2rem;
+                            height: auto;
+                            background: transparent;
+                        }
+                        span {
+                            br {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .area-image {
+                h2 {
+                    display: none;
+                }
+                .image {
+                    max-width: 30.5rem;
+                    height: 24.8rem;
+                    .circle {
+                        max-width: 26.7rem;
+                        right: 0;
+                    }
+                    .card-front {
+                        max-width: 21.1rem;
+                        top: 2.9rem;
+                    }
+                    .card-back {
+                        max-width: 17rem;
+                        bottom: 0;
+                        right: 0.6rem;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -261,3 +425,138 @@
 }
 }
 
+.s-card-depoimentos {
+    padding-top: 13.4rem;
+    .container {
+        
+
+        .t-top {
+            margin-bottom: 4rem;
+            @include flex(row, flex-end, space-between);
+            h2 {
+                font-weight: bold;
+                color: $grey-600;
+                span {
+                display: block;
+                font-family: 'Poppins', sans-serif;
+                font-weight: bold;
+                font-size: 4rem;
+                line-height: 112%;
+
+                letter-spacing: -1px;
+
+                color: $grey-200;
+                }
+            }
+
+            .swiper-pagination {
+                position: relative;
+
+                .swiper-pagination-bullet {
+                    background: $brand-yellow;
+                    opacity: 0.3;
+                    transition: all .3s;
+                    border-radius: 12px;
+                    &:not(:first-child) {
+                        margin-left: 0.4rem;
+                    }
+                            
+                &-active {
+                    width: 17.23px;
+                    opacity: 1;
+                }
+                }
+            }
+        }
+        .slide-depoimentos {
+            overflow: hidden;
+        }
+    }
+}
+
+.s-conta-digital {
+    padding-top: 12.7rem;
+    padding-bottom: 8.7rem;
+    .container {
+        @include flex(row, center, space-between);
+        .text {
+            width: 100%;
+            max-width: 54.2rem;
+            h2 {
+                width: 100%;
+                max-width: 54.2rem;
+                font-weight: bold;
+                color: $grey-600;
+                margin-bottom: 4.5rem;
+                span {
+                    display: block;
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 600;
+                    font-size: 4rem;
+                    color: $grey-200;
+                    line-height: 112%;
+                    letter-spacing: -1px;
+                    margin-bottom: 0.9rem;
+                }
+            }
+            ul {
+                margin-bottom: 6.1rem;
+                li {
+                    display: flex;
+                    align-items: center;
+                    &:not(:last-child) {
+                        margin-bottom: 4.5rem;
+                    }
+                    .icon {
+                        @include flex(row, center, center);
+                        width: 4.5rem;
+                        height: 4.5rem;
+                        background-color: $brand-green-light;
+                        border-radius: 8px;
+                        margin-right: 2.6rem;
+                    }
+                    .info {
+              
+                        h4 {
+                            color: $grey-400;
+                            margin-bottom: 0.4rem;
+                        }
+                        p {
+                            font-size: 1.8rem;
+                            line-height: 150%;
+                            color: $grey-300;
+                        }
+                    }
+                }
+            }
+        }
+        .image {
+            position: relative;
+            width: 100%;
+            max-width: 71.2rem;
+            height: 59.8rem;
+            margin-right: -3.8rem;
+            left: 12.5rem;
+
+            img {
+                position: absolute;
+
+                &.circle {
+                    right: 0;
+                    bottom: 0;
+                }
+                &.mockup-02 {
+                    left: 0;
+                    bottom: 4.7rem;
+                }
+
+                &.mockup-01 {
+                    top: 3rem;
+                    left: 25.8rem;
+                }
+            }
+           
+        }
+
+    }
+}

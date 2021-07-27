@@ -6,8 +6,13 @@
     height: 20.9rem;
     background-color: rgba(241, 240, 245, 0.55);
     border-radius: 8px;
-
+    transition: all .3s;
+    cursor: pointer;
     padding: 3.7rem 3.2rem 2.3rem 3.2rem;
+
+    &:hover {
+        transform: scale(1.01);
+    }
 
     .user {
         @include flex(row, center, space-between);
