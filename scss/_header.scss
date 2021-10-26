@@ -6,11 +6,67 @@ header {
     height: 8.8rem;
     display: flex;
     border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+    z-index: 2022;
     .container {
         @include flex(row, center, space-between);
         nav {
+            position: relative;
             display: flex;
             align-items: center;
+            .dropdown {
+                position: absolute;
+                top: 4.9rem;
+                left: -13rem;
+                width: 100%;
+                max-width: 37.3rem;
+                height: 41.7rem;
+                background-color: #FFFFFF;
+                border-radius: 6px;
+                padding: 4rem;
+                opacity: 0;
+                pointer-events: none;
+                transform: translateY(20px);
+                transition: all .3s;
+                &::after {
+                    content: "";
+                    width: 29.3rem;
+                    height: 0.5rem;
+                    background: #FFC800;
+                    border-radius: 12px 12px 0px 0px;
+                    position: absolute;
+                    bottom: 0;
+
+                }
+                &.active {
+                    opacity: 1;
+                    pointer-events: all;
+                    transform: translateY(0px);
+                }
+                .item { 
+                    &:not(:last-child) {
+                        margin-bottom: 2.8rem;
+                    }
+                    strong {
+                        font-weight: 600;
+                        line-height: 19px;
+                        color: $grey-400;
+                        display: block;
+                        margin-bottom: 4px;
+                        transition: all .4s;
+                        cursor: pointer;
+                        &:hover {
+                            color: #0073CE;
+                        }
+                    }
+                    p {
+                        font-size: 1.4rem;
+                        line-height: 150%;
+                        color: $grey-500;
+                    }
+                }
+            }
+
+            }
             ul {
                 display: flex;
                 align-items: center;
@@ -78,4 +134,3 @@ header {
        }
     }
    
-}
